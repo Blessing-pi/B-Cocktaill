@@ -1,0 +1,111 @@
+nav{
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  max-width: 100%;
+  height: 5rem;
+  padding: 0 7%;
+  box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+}
+nav .nav-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+nav .nav-center .links {
+  display: flex;
+  list-style: none;
+  margin-top: 1.5rem;
+}
+nav .nav-center .links li{
+  text-transform: capitalize;
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+}
+nav .nav-center .links li a{
+  color: #800020;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+nav .nav-center .links li a:hover, .active{
+  border-bottom: 2px solid #8B0000;
+  border-radius: 2px;
+}
+nav .nav-center .links .a{
+  border-bottom: 2px solid #8B0000;
+}
+nav .nav-center .links li a.active {
+  border-bottom: 3px solid #800020;  /* thick underline */
+  padding-bottom: 2px;
+}   
+nav .logo {
+  position: absolute;   
+  left: 7%;            
+}
+nav .logo h2{
+  font-weight: 800;
+  margin-top: 1.5rem;
+  font-size: larger;
+  color: #8B0000;
+}
+nav .logo h2 span{
+  color: #800020;
+}
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #800020;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+@media (max-width: 768px) {
+  nav {
+    height: auto;
+    padding: 1rem 7%;
+  }
+
+  nav .nav-center {
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  /* Hide links initially */
+  nav .nav-center .links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Show when active */
+  nav .nav-center .links.active {
+    display: flex;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* Adjust logo so it doesn’t overlap */
+  nav .logo {
+    position: static;
+    margin-bottom: 0.5rem;
+  }
+
+  nav .logo h2 {
+    margin-top: 0;
+  }
+}

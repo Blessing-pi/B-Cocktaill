@@ -1,0 +1,53 @@
+.card-list {
+    font-family: 'Poppins', sans-serif;
+    color: #800020;           
+    text-align: center;      
+    margin: 20px 0;        
+    font-size: 1.2rem;     
+    font-weight: bold;     
+}
+
+.card-lists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem;
+  max-width: 1200px;   
+  margin: 0 auto;      
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.card-lists article {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card-lists article img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+@media (max-width: 1024px) {
+  .card-lists {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+  .card-lists {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .card-lists article img {
+    height: 200px; /* smaller images on phones */
+  }
+}
+

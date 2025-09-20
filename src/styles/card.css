@@ -1,0 +1,52 @@
+.card{
+    font-family: sans-serif;
+    padding: 8px;
+    min-height: 396px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card h3{
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+.label{
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: white;
+    margin-right: 5px;
+    background-color: #800020;
+}
+.details-btn{
+    font-size: x-small;
+    background-color:#8B0000;
+    color: white;
+    border: none;
+    padding: 4px 6px;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: 2px 1px 0 black;
+    align-items: flex-start;
+    margin-top: auto;
+    margin-bottom: 8px;
+}
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 6px;            /* slightly smaller padding */
+    min-height: auto;        /* allow natural shrink */
+  }
+
+  .card h3 {
+    font-size: 1rem;         /* smaller heading */
+  }
+
+  .label {
+    font-size: 0.75rem;      /* smaller labels */
+    padding: 1px 3px;
+  }
+
+  .details-btn {
+    font-size: xx-small;     /* shrink button text */
+    padding: 3px 5px;        /* smaller buttons */
+  }
+}
