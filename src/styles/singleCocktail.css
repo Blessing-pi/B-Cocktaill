@@ -63,7 +63,7 @@
   text-decoration: none;
   border-radius: 8px;
   transition: background 0.3s ease;
-  width: 100px;
+  width: 150px;
   white-space: nowrap;
 }
 
@@ -72,24 +72,23 @@
 }
 @media screen and (max-width: 1024px) {
   .single-cocktail {
-    grid-template-columns: 1fr; /* stack */
+    grid-template-columns: 1fr; 
     gap: 1.5rem;
   }
 
   .single-cocktail h2 {
-    grid-column: auto; /* no forced span */
+    grid-column: auto;
     font-size: 1.6rem;
     text-align: center;
   }
 
   .single-cocktail img {
     max-width: 80%;
-    margin: 0 auto; /* center image */
+    margin: 0 auto;
     display: block;
   }
 }
 
-/* Phones */
 @media screen and (max-width: 768px) {
   .single-cocktail {
     padding: 1rem;
@@ -109,9 +108,4 @@
     padding: 0.8rem;
   }
 
-  .btn {
-    width: 100px;
-    text-align: center;
-    font-size: 0.9rem;
-  }
 }

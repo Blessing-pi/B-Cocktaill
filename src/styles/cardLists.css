@@ -6,16 +6,15 @@
     font-size: 1.2rem;     
     font-weight: bold;     
 }
-
 .card-lists {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
-  gap: 2rem;
-  max-width: 1200px;   
-  margin: 0 auto;      
-  padding: 2rem;
+  gap: 4rem;
+  max-width: 1700px;   
+  padding: 5rem;
   box-sizing: border-box;
   width: 100%;
+  margin: 0 auto;
 }
 
 .card-lists article {
@@ -28,26 +27,39 @@
 }
 .card-lists article img {
   width: 100%;
-  height: 300px;
+  height: 400px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px)  and (min-width: 900px) {
   .card-lists {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); 
+    padding: 4rem ;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 899px) {
+  .card-lists {
+    grid-template-columns: 1fr;
+    padding: 4rem;
+    gap: 1.5rem;
+  }
+  .card-lists article {
+    max-width: 100%;
+  }
+  .card-list {
+    font-size: 1rem;
   }
 }
 
-/* Phones */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .card-lists {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-    gap: 1.5rem;
+    grid-template-columns: 1fr; 
+    padding: 1.5rem;
+    gap: 2rem;
   }
 
   .card-lists article img {
-    height: 200px; /* smaller images on phones */
+    height: 300px;
   }
 }
-

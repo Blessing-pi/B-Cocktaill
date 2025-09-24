@@ -1,21 +1,31 @@
 .card{
     font-family: sans-serif;
-    padding: 8px;
+    padding: 10px;
     min-height: 396px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+   
 }
+
 .card h3{
-    margin: 0.5rem 0;
-    font-weight: bold;
+  margin: 0.5rem 0;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
+.card p{
+  margin: 6px 0;       
+  /* font-size: 0.9rem; */
+}
+
 .label{
-    padding: 2px 4px;
-    border-radius: 4px;
-    color: white;
-    margin-right: 5px;
-    background-color: #800020;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: white;
+  margin-right: 5px;
+  margin-bottom: 4px;
+  background-color: #800020;
 }
 .details-btn{
     font-size: x-small;
@@ -32,21 +42,21 @@
 }
 @media screen and (max-width: 768px) {
   .card {
-    padding: 6px;            /* slightly smaller padding */
-    min-height: auto;        /* allow natural shrink */
+    padding: 6px;            
+    min-height: auto;        
   }
 
   .card h3 {
-    font-size: 1rem;         /* smaller heading */
+    font-size: 1rem;         
   }
 
   .label {
-    font-size: 0.75rem;      /* smaller labels */
+    font-size: 0.75rem;     
     padding: 1px 3px;
   }
 
   .details-btn {
-    font-size: xx-small;     /* shrink button text */
-    padding: 3px 5px;        /* smaller buttons */
+    font-size: xx-small;   
+    padding: 3px 5px;       
   }
 }

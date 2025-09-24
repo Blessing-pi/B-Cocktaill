@@ -1,41 +1,59 @@
-
-import { Link, NavLink } from 'react-router';
+import { NavLink } from 'react-router';
 import { GiHamburgerMenu } from "react-icons/gi";
-import '../styles/navbar.css'
+import { IoMdClose } from "react-icons/io"; 
+import '../styles/navbar.css';
 import { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-    return ( 
-       <nav>
-           <div className="nav-center">
-             <div className="logo">
-                <h2>Blessed-<span>Cocktail</span></h2>
-             </div>
-             <div>
-                <ul className="links">
-                  <li>
-                    <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>About</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/training" className={({ isActive }) => isActive ? 'active' : ''}>Training</NavLink>
-                  </li>
-                </ul>
-             </div>
-                {/* Hamburger (stays at the end) */}
-                <button
-                  className={`hamburger ${isOpen ? "open" : ""}`}
-                  onClick={() => setIsOpen(!isOpen)}
-                  aria-label="Toggle menu"
-                >
-                  <GiHamburgerMenu />
-                </button>
-           </div>
-       </nav>
-     );
+
+  return ( 
+    <nav>
+      <div className="nav-center">
+        {/* Desktop logo */}
+        <div className="logo desktop-logo">
+          <h2>Blessed-<span>Cocktail</span></h2>
+        </div>
+
+        {/* Slide-in menu */}
+        <ul className={`links ${isOpen ? "active" : ""}`}>
+          <div className="menu-header">
+            <div className="logo mobile-logo">
+              <h2>Blessed-<span>Cocktail</span></h2>
+            </div>
+
+           
+            <button 
+              className="close-btn"
+              onClick={() => setIsOpen(false)}
+              aria-label="Close menu"
+            >
+              <IoMdClose />
+            </button>
+          </div>
+
+          <li>
+            <NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" onClick={() => setIsOpen(false)}>About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/training" onClick={() => setIsOpen(false)}>Training</NavLink>
+          </li>
+        </ul>
+
+        {/* Hamburger toggle */}
+        <button
+          className={`hamburger ${isOpen ? "open" : ""}`}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          <GiHamburgerMenu />
+        </button>
+      </div>
+    </nav>
+  );
 }
  
 export default Navbar;
