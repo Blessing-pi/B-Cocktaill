@@ -2,7 +2,7 @@ nav{
   font-family: 'Poppins', sans-serif;
   align-items: center;
   max-width: 100%;
-  height: 7rem;
+  height: 5rem;
   padding: 0 7%;
   box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
 }
@@ -10,12 +10,11 @@ nav .nav-center{
   display: flex;
   align-items: center;
   justify-content: center;
-  /* gap: 2rem; */
 }
 nav .nav-center .links {
   display: flex;
   list-style: none;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   gap: 2rem;
 }
 nav .nav-center .links li{
@@ -25,17 +24,13 @@ nav .nav-center .links li{
   margin-right: 0.5rem;
   font-weight: 400;
   letter-spacing: 2px;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   padding: 0.25rem 0.5rem;
 }
 nav .nav-center .links li a{
   color: #800020;
   text-decoration: none;
   padding-bottom: 2px;
-}
-nav .nav-center .links li a:hover, .active{
-  border-bottom: 2px solid #8B0000;
-  border-radius: 2px;
 }
 nav .nav-center .links .a{
   border-bottom: 2px solid #8B0000;
@@ -47,17 +42,18 @@ nav .nav-center .links li a.active {
 nav .logo {
   position: absolute;   
   left: 7%;  
-  font-size: 1.3rem;  
-  margin-top: 1rem;        
+  font-size: 1.2rem;  
 }
 nav .logo h2{
+  font-family: 'Playfair Display', 'sans-serif';
   font-weight: 800;
   margin-top: 1.5rem;
   font-size: larger;
   color: #8B0000;
 }
 nav .logo h2 span{
-  color: #800020;
+  color: #B22222;
+  font-style: italic;
 }
 .hamburger {
   display: none;
@@ -67,13 +63,11 @@ nav .logo h2 span{
   background: none;
   border: none;
 }
-.mobile-logo {
-  display: none;
-}
+.mobile-logo,
 .close-btn {
   display: none;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1023px) {
   nav {
     height: auto;
     padding: 1rem 7%;
@@ -150,4 +144,3 @@ nav .nav-center .links .mobile-logo h2 span {
     margin-left: auto;
 }
 }
-

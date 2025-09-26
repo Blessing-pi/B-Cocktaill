@@ -12,14 +12,14 @@ const Navbar = () => {
       <div className="nav-center">
         {/* Desktop logo */}
         <div className="logo desktop-logo">
-          <h2>Blessed-<span>Cocktail</span></h2>
+          <h2>Blessing's <span>Elixirs</span></h2>
         </div>
 
         {/* Slide-in menu */}
         <ul className={`links ${isOpen ? "active" : ""}`}>
           <div className="menu-header">
             <div className="logo mobile-logo">
-              <h2>Blessed-<span>Cocktail</span></h2>
+              <h2>Blessing's <span>Elixirs</span></h2>
             </div>
 
            

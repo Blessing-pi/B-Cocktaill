@@ -1,20 +1,33 @@
 .search-form{
-  font-family:'Poppins', sans-serif;
   width: 80%;
   margin: auto;
+  /* background-color: rgb(245, 245, 245); */
   padding: 30px;
   margin-top: 5%;
   border-radius: 10px;
   box-shadow:2px 5px 3px 0px rgba(0, 0, 0, 0.5) ;
 }
 .search-form .form-control label{
+  /* font-weight: small; */
   display: block;
-  letter-spacing: 0.009rem;
-  color: #8B0000;
-  font-size: large;
+  font-size: bold;
+  letter-spacing: 0.09rem;
+  color: darkorange;
+}
+
+@media screen and (min-width: 900px) {
+  .search-form{
+    width: 50%;
+    margin-top: 4%;
+  }
+  .search-form .form-control label{
+    font-size: larger;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+  }
 }
 .search-form .form-control span{
-  color: #800020;
+  color: green;
 }
 .search-form .form-control input{
     display: block;
@@ -25,15 +38,4 @@
 }
 .section{
   padding: 5rem ;
-}
-
-@media screen and (min-width: 900px) {
-  .search-form{
-    width: 50%;
-    margin-top: 4%;
-  }
-  .search-form .form-control label{
-    font-size: large;
-    letter-spacing: 0.09rem;
-  }
 }

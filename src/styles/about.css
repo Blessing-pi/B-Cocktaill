@@ -11,23 +11,22 @@
 }
 .about-page h2 {
   text-align: center;
-  color: #800020;                 
-  margin-bottom: 3rem;
-  position: relative;
+  color: #800020;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  font-size:large;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  position: relative;
 }
-
 .about-page h2::after {
   content: '';
   display: block;
   width: 80px;
-  height: 4px;
+  height: 3px;
   background-color: #8B0000;      
-  margin: 0.5rem auto 0;
+  margin: 0.5rem auto ;
   border-radius: 2px;
 }
-
 .about-row {
   display: flex;
   gap: 3rem;      
@@ -36,7 +35,6 @@
   width: 100%;             
   flex-wrap: wrap;
 }
-
 .about-row img {
   width: 47%;          
   height: auto;
@@ -44,42 +42,75 @@
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
   flex-shrink: 0;
 }
-
 .about-text {
   flex: 1;             
   max-width: 45ch;    
 }
-
 .about-text h3 {
-  font-size: 1.8rem;
   font-weight: 700;
   color: #800020;                  
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
-  text-transform: uppercase;
   position: relative;
 }
-
-
-.about-text h3::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: #B22222;      
-  margin-top: 0.3rem;
-  border-radius: 2px;
-}
-
 .about-text h4 {
-  font-size: 1.3rem;
-  font-weight: 600;
   color: #B22222;                
   margin: 0.5rem 0 0.25rem;
 }
-
-
 .about-text strong {
   color: #800020;                
   font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .about-row {
+    gap: 2rem;               
+  }
+  .about-row img {
+    width: 100%;             
+    margin-bottom: 1.5rem;   
+  }
+  .about-text {
+    max-width: 100%;          
+  }
+  .about-text h3 {
+    font-size: 1.5rem;
+  }
+  .about-text h4 {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 600px) {
+  .about-page {
+    padding: 0 1rem;           
+  }
+  .about-page h2 {
+    font-size: 1.6rem;
+  }
+  .about-row {
+    flex-direction: column;   
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .about-text h3 {
+    font-size: 1.3rem;
+  }
+  .about-text h4 {
+    font-size: 1rem;
+  }
+  .about-text {
+    text-align: left;         
+  }
+}
+
+@media (max-width: 400px) {
+  .about-page h2 {
+    font-size: 1.4rem;
+  }
+  .about-text h3 {
+    font-size: 1.1rem;
+  }
+  .about-text h4 {
+    font-size: 0.95rem;
+  }
 }

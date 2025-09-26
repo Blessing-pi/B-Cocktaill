@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/footer.css'
 import { FaEnvelope, FaGithub, FaTwitter } from 'react-icons/fa'
+import { NavLink } from 'react-router'
 
 const Footer = () => {
   return (
@@ -8,9 +9,9 @@ const Footer = () => {
       <div className="footer-container">
 
         <div className="footer-section">
-          <h3>Blessed-<span>Cocktail</span></h3>
+          <h3>Blessing's <span>Elixirs</span></h3>
           <p>
-            At Blessed-Cocktail, we are passionate about the art of mixology
+            At Blessing's Elixirs, we are passionate about the art of mixology
             and the joy that comes from crafting and savoring exceptional cocktails.
           </p>
         </div>
@@ -23,13 +24,19 @@ const Footer = () => {
             <li>Cocktail Recipes & Techniques</li>
           </ul>
         </div>
-
+ 
         <div className="footer-section">
           <h3>Pages</h3>
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Training</li>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About</NavLink>
+            </li>
+            <li>
+              <NavLink to="/training">Training</NavLink>
+            </li>
           </ul>
         </div>
 
@@ -43,7 +50,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Blessed-Cocktail. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} Blessing's Elixirs. All Rights Reserved.</p>
       </div>
     </footer>
   )
